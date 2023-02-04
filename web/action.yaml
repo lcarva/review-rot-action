@@ -1,0 +1,19 @@
+---
+name: review-rot
+author: Luiz Carvalho <lui@redhat.com>
+description: Copy review-rot web pages
+inputs:
+  output:
+    description: Path to the output dir.
+    required: true
+runs:
+  using: docker
+  image: docker://quay.io/lucarval/review-rot:latest
+  entrypoint: ""
+  args:
+    - cp
+    - -r
+    - /opt/app-root/src/docs/css
+    - /opt/app-root/src/docs/js
+    - /opt/app-root/src/docs/index.html
+    - ${{ inputs.output }}
