@@ -9,9 +9,8 @@ inputs:
 runs:
   using: docker
   image: docker://quay.io/lucarval/review-rot:latest
-  entrypoint: ""
+  entrypoint: "cp"
   args:
-    - cp
     - -r
     - /opt/app-root/src/docs/css
     - /opt/app-root/src/docs/js
