@@ -131,3 +131,6 @@ jobs:
         uses: actions/deploy-pages@v1
         id: deployment
 ```
+
+NOTE: The workflow above requires setting the source to "GitHub Actions" in the repository's
+page settings.
