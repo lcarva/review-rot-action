@@ -72,8 +72,8 @@ on:
     branches:
       - main
   schedule:
-    # At every minute past every hour on every day-of-week from Monday through Friday
-    - cron: '* */1 * * 1-5'
+    # Every 30 minutes, Monday through Friday
+    - cron: '*/30 * * * 1-5'                 
   workflow_dispatch:
 
 jobs:
